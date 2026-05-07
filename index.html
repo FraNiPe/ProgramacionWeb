@@ -23,19 +23,24 @@
             <nav class="header-nav">
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Ficción</a></li>
-                <li><a href="#">Ensayo</a></li>
+                <li><a href="#">Novedades</a></li>
+                <li><a href="#">Descubrir</a></li>
                 <li><a href="#">Comunidad</a></li>
             </ul>
             </nav>
 
             <div class="header-icons">
-                <button class="icon-btn search-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-search">
-                    <title id="title-search">Buscar</title>
-                    <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M17.5 17.5L13.9167 13.9167" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <form class="search-form" action="resultados.html" method="GET">
+                <input type="search" id="buscador" name="q" class="search-input" placeholder="Buscar..." required aria-label="Buscar">
+                
+                <label for="buscador" class="icon-btn search-btn" aria-label="Abrir buscador">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-search">
+                        <title id="title-search">Buscar</title>
+                        <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.5 17.5L13.9167 13.9167" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </label>
+                </form>
             </button>
 
                 <button class="icon-btn user-btn">
@@ -76,19 +81,17 @@
         <div class="footer-col links-col">
             <h3 class="footer-heading">EXPLORAR</h3>
             <ul class="footer-menu">
+                <li><a href="#">Novedades</a></li>
                 <li><a href="#">Ficción</a></li>
                 <li><a href="#">Ensayo</a></li>
                 <li><a href="#">Poesía</a></li>
-                <li><a href="#">Infantil</a></li>
             </ul>
         </div>
 
         <div class="footer-col links-col">
             <h3 class="footer-heading">COMUNIDAD</h3>
             <ul class="footer-menu">
-                <li><a href="#">Club de lectura</a></li>
                 <li><a href="#">Eventos</a></li>
-                <li><a href="#">Blog editorial</a></li>
                 <li><a href="#">Sobre nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
