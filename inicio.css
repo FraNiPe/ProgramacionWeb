@@ -7,13 +7,11 @@
 body{
     font-family: 'Inter', sans-serif;
     font-size: 0.938em;
-    width: 100%;
+    min-height: 100vh;
     background-color: #fff ;
     color: #000;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-
 }
 
 /*BANNER PROMO*/
@@ -21,6 +19,7 @@ body{
     height: 2.25em;
     background-color: #1C1917;
     padding: 10px;
+    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -36,7 +35,143 @@ body{
 }
 
 .content{
-    flex-grow: 1;
+    flex:1;
+}
+
+.hero-section{
+    width: 100%;
+    min-height: 70vh;
+    background-image: url(img/fondo-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3.75em;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25em;
 }
 
 
+.hero-tag{
+    font-weight: 500;
+    font-size: 0.75em;
+    line-height: 1em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: 0.125em solid white;
+    color: #fff;
+    padding: 0.35em 0.75em;
+}
+
+h1{
+    font-family: 'Playfair Display';
+    color: #FFF;
+    font-size: 4.5em;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.hero-content p{
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 300;
+}
+
+.btn-hero{
+    color: #1C1917;
+    font-size: 0.875em;
+    font-weight: 500;
+    line-height: 1.25em;
+    letter-spacing: 0.05;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 0.875em 2em;
+    border-radius: 0.125em;
+}
+
+.btn-hero:hover{
+    background-color: #e4e4e3;
+}
+
+.promo-section{
+    width: 100%;
+    max-width: 75em;
+    margin: 0 auto;
+    padding: 2.5em 1.5em;
+}
+
+.promo-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.25em;
+}
+
+.promo-card{
+    padding: 1.875em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.card-large{
+    background-image: url(img/promo-card.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-row:span 2;
+}
+
+.card-small{
+    background-image: linear-gradient(rgba(28, 25, 23, 0.6), rgba(28, 25, 23, 0.8)),url(img/promo-card2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-two{
+    background-image: linear-gradient(rgba(28, 25, 23, 0.6), rgba(28, 25, 23, 0.8)), url(img/promo-card3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card-content h2{
+    color: #FFF;
+    font-family: "Playfair Display";
+    font-size: 2.25em;
+    font-weight: 500;
+}
+
+.card-content a{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.card-content h3{
+    color: #fff;
+    font-family: "Playfair Display";
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.card-content p{
+    color: #f7bb4c;
+    font-size: 0.825em;
+    font-weight: 300;
+}

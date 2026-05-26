@@ -6,7 +6,6 @@ h1 a, h2 a {
 
 .header-wrapper{
     width: 100%;
-    position: fixed;
 }
 
 .header-main{
@@ -16,6 +15,7 @@ h1 a, h2 a {
     align-items: center;
     padding: 0px 80px;
     border-bottom: 1px solid #E7E5E4;
+    background-color: #fff;
 }
 
 .header-left{
@@ -23,7 +23,7 @@ h1 a, h2 a {
     font-family: "Playfair Display";
     font-size: 0.875em;
     letter-spacing: -0.6px;
-}
+}   
 
 .header-nav{
     display: flex;

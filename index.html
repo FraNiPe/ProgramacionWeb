@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="inicio.css">
     <link rel="stylesheet" href="header-footer.css">
-    <title>Inicio</title>
+    <title>Inicio - Relatos & Hojas</title>
 </head>
 <body>
+
+    <!--header y navbar-->
     <header class="header-wrapper">
 
-        <!-- Banner de promoción -->
         <div class="banner-promo">
             <p class="banner">¡Nuevo! Organizá tus estanterias por géneros y épocas</p>
         </div>
 
-        <!-- Header -->
         <div class="header-main">
             <div class="header-left">
-                <h1><a href="index.html">Relatos & Hojas</a></h1>
+                <a href="index.html" class="logo-link">
+                    <img src="img/Relatos & Hojas logo.png" alt="Logo de Relatos  & Hojas" class="logo-img">
+                </a>
             </div>
+
             <nav class="header-nav">
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
@@ -41,9 +44,8 @@
                     </svg>
                 </label>
                 </form>
-            </button>
 
-                <button class="icon-btn user-btn">
+                <button class="icon-btn user-btn" aria-label="Mi cuenta">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-login">
                     <title id="title-login">Iniciar sesión</title>
                     <path d="M15.8334 17.5V15.8333C15.8334 14.9493 15.4822 14.1014 14.857 13.4763C14.2319 12.8512 13.3841 12.5 12.5 12.5H7.50002C6.61597 12.5 5.76812 12.8512 5.143 13.4763C4.51788 14.1014 4.16669 14.9493 4.16669 15.8333V17.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
@@ -51,7 +53,7 @@
                 </svg>
                 </button>
 
-                <button class="icon-btn favorite-btn">
+                <button class="icon-btn favorite-btn" aria-label="Favoritos">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-favorite">
                     <title id="title-favorite">Favoritos</title>
                     <path d="M15.8333 11.6667C17.075 10.45 18.3333 8.99167 18.3333 7.08333C18.3333 5.86776 17.8504 4.70197 16.9909 3.84243C16.1313 2.98289 14.9655 2.5 13.75 2.5C12.2833 2.5 11.25 2.91667 9.99996 4.16667C8.74996 2.91667 7.71663 2.5 6.24996 2.5C5.03438 2.5 3.86859 2.98289 3.00905 3.84243C2.14951 4.70197 1.66663 5.86776 1.66663 7.08333C1.66663 9 2.91663 10.4583 4.16663 11.6667L9.99996 17.5L15.8333 11.6667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
@@ -61,23 +63,111 @@
     </div>
     </header>
 
+<!--termina header y navbar-->
+
+
+
     <main class="content">
 
-<!--debe tener un mínimo de 12 items/articulos para poder mostrarlos en una forma de 4 columnas por 3 filas, o 3 columnas por 4 filas-->
 
-        
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="hero-tag">Nueva colección</span>
+                <h1>Clásicos de Otoño</h1>
+                <p>Disfrutá una lectura para acompañarte en esta nueva temporada. Conocé nuestras propuestas recomendadas.</p>
+                <a href="#" class="btn-hero">Ver colección</a>
+            </div>
+        </section>
+
+        <section class="promo-section">
+            <div class="promo-container">
+
+                <article class="promo-card card-large">
+                    <div class="card-content">
+                        <h2>Novedades: títulos de ensayo contemporáneo</h2>
+                        <a href="#" class="card-link">Explorar colección</a>
+                    </div>
+                </article>
+
+                <article class="promo-card card-small">
+                    <div class="card-content">
+                        <h3>Subscríbete a nuestro newsletter</h3>
+                        <p>Recibe novedades en tu correo electrónico.</p>
+                    </div>
+                </article>
+
+                <article class="promo-card card-small card-two">
+                    <div class="card-content">
+                        <h3>Nueva antología</h3>
+                        <p>Reservá tu copia.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="catalog-section">
+            <div class="section-header">
+                <h2>Novedades de la semana</h2>
+                <p>Encuentra tu próxima gran historia.</p>
+            </div>
+
+            <div class="products-grid">
+
+                <article class="product-card">
+                    <div class="product-img-box">
+                        <img src="img/heartstopper.jpg" alt="Portada de Heartstopper">
+                    </div>
+                    <div class="product-info">
+                        <span class="rating">★ 4.8</span>
+                        <h3>Heartstopper</h3>
+                        <span class="author">Alice Oseman</span>
+                        <span class="pages">240 páginas</span>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img-box">
+                        <img src="img/cometierra.jpg" alt="Portada de Cometierra">
+                    </div>
+                    <div class="product-info">
+                        <span class="rating">★ 4.6</span>
+                        <h3>Cometierra</h3>
+                        <span class="author">Dolores Reyes</span>
+                        <span class="pages">180 páginas</span>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img-box">
+                        <img src="img/enagostonosvemos.jpg" alt="Portada de En agosto nos vemos">
+                    </div>
+                    <div class="product-info">
+                        <span class="rating">★ 4.1</span>
+                        <h3>En agosto nos vemos</h3>
+                        <span class="author">Gabriel García Márquez</span>
+                        <span class="pages">220 páginas</span>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img-box">
+                        <img src="img/rayuela.jpg" alt="Portada de Rayuela">
+                    </div>
+                    <div class="product-info">
+                        <span class="rating">★ 4.9</span>
+                        <h3>Rayuela</h3>
+                        <span class="author">Julio Cortázar</span>
+                        <span class="pages">350 páginas</span>
+                    </div>
+                </article>
+
+            </div>
 
 
 
 
-
-
-
-
-
-
-
-
+        </section>
 
 
 
@@ -87,14 +177,14 @@
 
 
 
-
-
     <!-- Footer -->
     <footer class="footer-wrapper">
         <div class="footer-main">
 
             <div class="footer-col brand-col">
-                <h2 class="footer-logo"><a href="index.html">Relatos & Hojas</a></h2>
+                <a href="index.html" class="logo-link">
+                    <img src="img/Relatos & Hojas logo.png" alt="Logo de Relatos  & Hojas" class="logo-img">
+                </a>
                 <p class="footer-desc">Librería independiente y rastreador de lecturas.</p>
             </div>
 
