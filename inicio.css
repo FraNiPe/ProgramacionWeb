@@ -35,8 +35,12 @@ body{
 }
 
 .content{
-    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
+
+
 
 .hero-section{
     width: 100%;
@@ -48,14 +52,15 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 3.75em;
+
 }
 
 .hero-content{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 1.25em;
+    margin: 0 auto;
 }
 
 
@@ -174,4 +179,238 @@ h1{
     color: #f7bb4c;
     font-size: 0.825em;
     font-weight: 300;
+}
+
+.catalog-section{
+    display: flex;
+    flex-direction: column;
+    max-width: 75em;
+    margin: 0 auto;
+    padding: 0.5em 1.5em;
+}
+
+.products-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.product-card{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.product-img-box {
+    width: 100%;             
+    aspect-ratio: 3 / 4;     
+    overflow: hidden;        
+    background-color: #f5f5f4;
+    position: relative;
+}
+
+.product-img-box img {
+    width: 100%;             
+    height: 100%;            
+    object-fit: cover;       
+    object-position: center; 
+}
+
+.card-fav-btn{
+    position: absolute;
+    top: 0.75em;
+    right: 0.75em;
+    z-index: 10;
+    background-color: #ffffff;
+    color: #1C1917;
+    border: none;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.card-fav-btn:hover {
+    color: #dc2626; 
+    transform: scale(1.05); 
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.rating{
+    color: #e48c00;
+    font-size: 0.9em;
+    font-weight: 500;
+    line-height: 1em;
+}
+
+.product-info h3{
+    color: #1C1917;
+    font-family: "Playfair Display";
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.author{
+    color: #57534E;
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.02188em;
+}
+
+.pages{
+    color: #A8A29E;
+    font-size: 0.75em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.section-header{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.section-header h2{
+    color: #1C1917;
+    font-family: "Playfair Display";
+    font-size: 2.25em;
+    font-weight: 500;
+}
+
+
+.section-header p{
+    color: #57534E;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 0.02188rem;
+}
+
+.community-section{
+    background-image: url(img/fondo-testimonial.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    margin-top: 3em;
+    padding: 2em 0;
+
+
+}
+
+.community-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75em;
+    margin: 0 auto;
+    padding: 3.75em 1.5em;
+    gap: 2.5em;
+}
+
+.community-info{
+    max-width: 30em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+.community-tag{
+    color: #A3523B;
+    font-size: 0.875em;
+    font-weight: 700;
+    line-height: 1.25em;
+    letter-spacing: 0.2625em;
+    text-transform: uppercase;
+}
+
+.community-info h2{
+    color: #fff;
+    font-family: "Playfair Display";
+    font-size: 3.75em;
+    font-weight: 500;
+}
+
+.community-info p{
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 100;
+}
+
+.community-link{
+    color: #fff;
+    font-size: 0.875em;
+    font-weight: 400;
+    letter-spacing: 0.0875em;
+    text-transform: uppercase;
+}
+
+.testimonials-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    max-width: 28em;
+    width: 100%;
+}
+
+.testimonial-card{
+    background-color: rgba(41, 37, 36, 0.7);
+    border-radius: 0.5em;
+    padding: 1.875em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.quote-icon{
+    width: 2.75em;
+    height: 2.75em;
+    margin-bottom: 1em;
+}
+
+.testimonial-text{
+    color: #FFF;
+    font-family: "Playfair Display";
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.testimonial-author{
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+}
+
+.author-img{
+    width: 2.75em;
+    height: 2.75em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-meta{
+    display: flex;
+    flex-direction: column;
+    gap: 0.125em;
+}
+
+.author-name {
+    color: #fff;
+    font-weight: 600;
+    font-style: normal; 
+}
+
+.author-tag {
+    color: #A3523B;
+    font-size: 0.75em;
+    font-weight: 500;
+    letter-spacing: 0.05em;
 }
