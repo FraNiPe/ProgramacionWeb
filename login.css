@@ -38,7 +38,8 @@
 }
 
 .textop1{
-    bottom: 4em;
+    bottom: 3em;
+    margin-bottom:1.5em ;
     font-family:'Playfair Display' ;
     color:#F9F8F6 ;
     font-size: 3em;
@@ -49,8 +50,8 @@
 
 }
 .textop2{
-    bottom: 1.5em;
-    line-height: 1.8em;
+    bottom: 2em;
+    line-height: 1.3em;
     font-family:'Inter';
     color: #F9F8F6;
     font-size: 2em;
@@ -148,7 +149,7 @@
    RESPONSIVE
 ========================= */
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 64em) {
 
     .container{
         flex-direction: column;
@@ -177,26 +178,26 @@
         padding: 4em 2em;
         gap: 2em;
     }
-
+    
     .form_login{
         width: 90%;
     }
 }
 
 
-@media (max-width: 768px) {
-
+@media screen and (max-width: 48em) {
+    
     .container{
         flex-direction: column;
     }
-
+    
     .seccion1 img{
         height: 50vh;
     }
-
+    
     .textop1{
         font-size: 2em;
-        bottom: 4.5em;
+        bottom: 4em;
     }
 
     .textop2{

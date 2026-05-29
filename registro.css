@@ -145,7 +145,7 @@
    RESPONSIVE
 ========================= */
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 64em) {
 
     .container{
         flex-direction: column;
@@ -181,7 +181,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media screen and (max-width: 48em) {
 
     .container{
         flex-direction: column;
