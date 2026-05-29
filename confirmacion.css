@@ -52,7 +52,7 @@
    RESPONSIVE
 ========================= */
 
-@media screen and (max-width:64em) {
+@media screen and (max-width:60em) {
     .textop1{
         text-align: center;
         font-size: 1.5em;

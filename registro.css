@@ -145,7 +145,7 @@
    RESPONSIVE
 ========================= */
 
-@media screen and (max-width: 64em) {
+@media screen and (max-width: 60em) {
 
     .container{
         flex-direction: column;
@@ -181,7 +181,7 @@
 }
 
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 47em) {
 
     .container{
         flex-direction: column;
@@ -193,7 +193,7 @@
 
     .textop1{
         font-size: 2em;
-        bottom: 4em;
+        bottom: 5em;
     }
 
     .textop2{
