@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background: #f5f3f1;
+}
+
+.contenedor {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+
+.lado-izquierdo {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.lado-izquierdo img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    display: block;
+}
+
+.texto-imagen {
+    position: absolute;
+    left: 5vw;
+    bottom: 15vh;
+
+    color: white;
+}
+
+.texto-imagen h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.texto-imagen p {
+    width: 420px;
+    line-height: 1.6;
+    font-size: 1.3rem;
+}
+
+
+.lado-derecho {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 80px 120px;
+}
+
+.volver {
+    text-decoration: none;
+    color: #666;
+
+    font-size: 12px;
+
+    margin-bottom: 40px;
+}
+
+.subtitulo {
+    color: #b8694d;
+
+    font-size: 12px;
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+.lado-derecho h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 70px;
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+.descripcion {
+    color: #777;
+
+    line-height: 1.7;
+
+    width: 430px;
+
+    margin-bottom: 35px;
+}
+
+
+.formulario {
+    width: 100%;
+    max-width: 450px;
+}
+
+.formulario label {
+    display: block;
+
+    margin-bottom: 8px;
+    margin-top: 15px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.formulario input {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #d8d8d8;
+
+    background: white;
+
+    margin-bottom: 10px;
+}
+
+.formulario input:focus {
+    outline: none;
+    border-color: #b8694d;
+}
+
+.formulario button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 16px;
+
+    border: none;
+
+    background: #1b1514;
+
+    color: white;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    opacity: .9;
+}
+
+
+
+@media(max-width:900px) {
+
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .lado-izquierdo,
+    .lado-derecho {
+        width: 100%;
+    }
+
+    .lado-izquierdo {
+        height: 450px;
+    }
+
+    .lado-derecho {
+        padding: 50px 30px;
+    }
+
+    .texto-imagen h2 {
+        font-size: 42px;
+    }
+
+    .texto-imagen p {
+        width: 300px;
+    }
+
+    .lado-derecho h1 {
+        font-size: 50px;
+    }
+
+    .descripcion {
+        width: 100%;
+    }
+}
