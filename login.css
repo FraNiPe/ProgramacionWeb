@@ -1,0 +1,249 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #F9F8F6;
+
+}
+.bienvenido{
+    font-family:'Inter' ;
+    font-weight: bold;
+    font-size: 0.8em;
+    color:#A3523B;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+
+}
+.seccion1{
+    position: relative;
+}
+.seccion1 img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+.seccion1 p{
+    position: absolute;
+    text-shadow: 5px 5px 5px black;
+    padding: 0.8em;
+}
+
+.textop1{
+    bottom: 3.3em;
+    margin-bottom:1.5em ;
+    font-family:'Playfair Display' ;
+    color:#F9F8F6 ;
+    font-size: 3em;
+    line-height: 1em;
+    font-weight: 500;
+    
+  
+
+}
+.textop2{
+    bottom: 2em;
+    line-height: 1.3em;
+    font-family:'Inter';
+    color: #F9F8F6;
+    font-size: 2em;
+    font-style: italic;
+    font-weight:300;
+    
+
+}
+.seccion1, .seccion2{
+    flex: 1;
+}
+
+ .seccion2{
+    height: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3em;
+}
+.form_login{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 0.5em;
+} 
+.container_contrasena{
+    display: flex;
+    justify-content: space-between;
+}
+.container_contrasena a{
+    font-family:'Inter' ;
+    color:#474542;
+    text-decoration:none ;
+    font-weight: 400;
+    line-height: 1em;
+    font-size: 0.9em;
+}
+.form_login input{
+    height: 3em;
+    border: 1px solid #00000090;
+    padding: 0.9em;
+
+
+}
+.form_login button{
+
+    margin: 2em;
+    height: 3em;
+    border-radius: 5%;
+    color: #ffffff ;
+    background-color: #1C1917;
+}
+.form_login button:hover{
+    background-color: #A3523B;
+}
+
+.seccion2_titulo{
+    font-family:'Playfair Display' ;
+    color: #1C1917;
+    font-size: 3em;
+
+}
+.form_login  label{
+    font-family:'Inter' ;
+    color:#1C1917;
+    font-size: 0.9em;
+    font-weight: bolder;
+}
+.subtitulo{
+    font-family:'Inter' ;
+    color:#57534E;
+    font-size: 1em;
+    text-align: center;
+    font-weight: lighter;
+
+}
+
+.in_sesion{
+    font-family:'Inter' ;
+    color:#57534E;
+    font-size: 0.9em;
+
+}
+.in_sesion a{
+    font-family:'Inter' ;
+    color:#57534E;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media screen and (max-width: 60em) {
+
+    .container{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .seccion1,
+    .seccion2{
+        width: 100%;
+    }
+
+    .seccion1 img{
+        height: 60vh;
+        object-fit: cover;
+    }
+
+    .textop1{
+        font-size: 2.5em;
+
+    }
+
+    .textop2{
+        font-size: 1.8em;
+    }
+
+    .seccion2{
+        padding: 4em 2em;
+        gap: 2em;
+    }
+    
+    .form_login{
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 47em) {
+    
+    .container{
+        flex-direction: column;
+    }
+    
+    .seccion1 img{
+        height: 50vh;
+    }
+    
+    .textop1{
+        font-size: 2em;
+        bottom: 5em;
+    }
+
+    .textop2{
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+
+    .seccion2{
+        width: 100%;
+        padding: 3em 1.5em;
+        height: auto;
+    }
+
+    .bienvenido{
+        font-size: 0.7em;
+        text-align: center;
+    }
+
+    .seccion2_titulo{
+        font-size: 2.2em;
+        text-align: center;
+    }
+
+    .subtitulo{
+        font-size: 0.9em;
+    }
+
+    .form_login{
+        width: 100%;
+    }
+
+    .form_login input{
+        height: 3.2em;
+    }
+
+    .form_login button{
+        margin: 1.5em 0;
+        width: 100%;
+    }
+    .container_contrasena{
+     flex-wrap: wrap;
+     gap: 0.5em;
+    }
+
+
+
+
+}
