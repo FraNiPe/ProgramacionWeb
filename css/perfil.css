@@ -248,6 +248,20 @@ body {
     cursor: pointer;
 }
 
+
+@media(max-width: 60em) {
+
+    .contenedor {
+        grid-template-columns: 1fr;
+        padding: 2em;
+    }
+
+    .grilla-libros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
 @media(max-width: 47em) {
 
     .grilla-libros {
@@ -259,15 +273,3 @@ body {
     }
 
 }
-@media(max-width: 60em) {
-
-    .contenedor {
-        grid-template-columns: 1fr;
-    }
-
-    .grilla-libros {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
