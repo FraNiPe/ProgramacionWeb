@@ -39,7 +39,7 @@ body {
 }
 
 .texto-imagen h2 {
-    font-family: "Cormorant Garamond", serif;
+    font-family: 'Playfair display';
     font-size: 4rem;
     margin-bottom: 0.9375em;
 }
@@ -52,6 +52,9 @@ body {
     font-weight: 300;
 }
 
+input{
+    font-family: 'Inter';
+}
 
 .lado-derecho {
     width: 50%;
@@ -81,8 +84,8 @@ body {
 }
 
 .lado-derecho h1 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 4.375em;
+    font-family: 'Playfair Display';
+    font-size: 3em;
     font-weight: 600;
 
     margin-bottom: 0.9375em;
@@ -90,36 +93,34 @@ body {
 
 .descripcion {
     color: #777;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.7;
     margin-bottom: 2.1875em;
 }
 
 
 .formulario {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-width: 28rem;
+    gap: 0.5em;
 }
 
 .formulario label {
     display: block;
 
-    margin-bottom: 0.5em;
-    margin-top: 0.9375em;
+    margin-bottom: 0.125em;
+    margin-top: 0.125em;
 
     font-size: 0.75em;
     font-weight: 600;
 }
 
 .formulario input {
-    width: 100%;
 
     padding: 0.9375em;
-
     border: 0.0625em solid #d8d8d8;
-
     background: white;
-
     margin-bottom: 0.625em;
 }
 
@@ -152,7 +153,11 @@ body {
 
 
 
-@media(max-width:47em) {
+@media screen and (max-width:47em) {
+
+    .body{
+        font-size: 70%;
+    }
 
     .contenedor {
         flex-direction: column;
@@ -171,19 +176,38 @@ body {
         padding: 3em 1.875em;
     }
 
-    .texto-imagen h2 {
-        font-size: 2.625em;
-    }
-
-    .texto-imagen p {
-        width: 18.75em;
-    }
-
-    .lado-derecho h1 {
-        font-size: 3.125em;
-    }
-
     .descripcion {
         width: 100%;
     }
 }
+
+@media screen and (max-width: 60em){
+    .body{
+        font-size: 80%;
+    }
+
+.contenedor {
+        flex-direction: column;
+    }
+
+    .lado-izquierdo,
+    .lado-derecho {
+        width: 100%;
+    }
+
+    .lado-izquierdo {
+        height: 28em;
+    }
+
+    .lado-derecho {
+        justify-content: center;
+        align-items: center;
+        padding: 3em 1.875em;
+    }
+
+    .descripcion {
+        text-align: center;
+    }
+}
+
+

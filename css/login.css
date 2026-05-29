@@ -143,6 +143,10 @@
     text-decoration: underline;
 
 }
+
+input{
+    font-family: 'Inter';
+}
 /* =========================
    RESPONSIVE
 ========================= */
