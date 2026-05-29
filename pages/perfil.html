@@ -3,23 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="header-footer.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
-    <title>Inicio sesión- Relatos & Hojas</title>
+    <title>Mi Cuenta</title>
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/perfil.css">
 </head>
 <body>
-
-    <!--header y navbar-->
     <header class="header-wrapper">
-
-        <div class="banner-promo">
-            <p class="banner">¡Nuevo! Organizá tus estanterias por géneros y épocas</p>
-        </div>
-
         <div class="header-main">
             <div class="header-left">
                 <a href="index.html" class="logo-link">
@@ -39,7 +28,7 @@
             <div class="header-icons">
                 <form class="search-form" action="resultados.html" method="GET">
                 <input type="search" id="buscador" name="q" class="search-input" placeholder="Buscar..." required aria-label="Buscar">
-
+                
                 <label for="buscador" class="icon-btn search-btn" aria-label="Abrir buscador">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-search">
                         <title id="title-search">Buscar</title>
@@ -49,13 +38,13 @@
                 </label>
                 </form>
 
-                <button class="icon-btn user-btn" aria-label="Mi cuenta">
+                <a href="/pages/login.html" class="icon-btn user-btn" aria-label="Mi cuenta">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-login">
                     <title id="title-login">Iniciar sesión</title>
                     <path d="M15.8334 17.5V15.8333C15.8334 14.9493 15.4822 14.1014 14.857 13.4763C14.2319 12.8512 13.3841 12.5 12.5 12.5H7.50002C6.61597 12.5 5.76812 12.8512 5.143 13.4763C4.51788 14.1014 4.16669 14.9493 4.16669 15.8333V17.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M10 9.16667C11.841 9.16667 13.3334 7.67428 13.3334 5.83333C13.3334 3.99238 11.841 2.5 10 2.5C8.15907 2.5 6.66669 3.99238 6.66669 5.83333C6.66669 7.67428 8.15907 9.16667 10 9.16667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                </button>
+            </a>
 
                 <button class="icon-btn favorite-btn" aria-label="Favoritos">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-favorite">
@@ -67,61 +56,230 @@
     </div>
     </header>
 
-<!--termina header y navbar-->
+  <div class="contenedor">
 
-    <main class="container">
-        <section class="seccion1">
-            <img src="img/7bd3ae901c1deefa316911ed73348cc90d22090b.jpg" alt="imagen_login">
-            <p class="textop1">Bienvenido de vuelta</p>
-            <p class="textop2">Tus próximas lecturas y tu estanteria digital te estan esperando.
-                Continúa donde lo dejaste.
-            </p>
+        <!-- lado izquierdo -->
+        <aside class="barra-lateral">
 
+            <div class="tarjeta-perfil">
 
-        </section>
-        <section class="seccion2">
-            <p class="bienvenido">acceso a tu cuenta</p>
-            <h2 class="seccion2_titulo"> Iniciar Sesión </h2>
-            <p class="subtitulo"> Ingresa a tus credenciales para acceder a tu biblioteca.</p>
+                <div class="foto-perfil">
+                    V
+                </div>
 
+                <h2>Valeria Lector</h2>
 
-            <form class="form_login" action="#" method="GET">
+                <p>@valeria_lee</p>
 
-                <label for="nombre"> NOMBRE DE USUARIO O CORREO ELECTRÓNICO</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Ej: usuario o lectornocturno@gmail.com " required autofocus>
+                <button class="editar-btn">
+                    EDITAR PERFIL
+                </button>
+
+            </div>
 
 
-                <div class="container_contrasena">
-                    <label for="contrasena"> CONTRASEÑA </label> <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
+            <div class="tarjeta-biblioteca">
+
+                <h4>Tu biblioteca</h4>
+
+                <div class="meta">
+
+                    <div class="fila-meta">
+
+                        <span>Meta lectura</span>
+
+                        <span>12 / 24</span>
+
+                    </div>
+
+                    <div class="barra">
+
+                        <div class="progreso"></div>
+
+                    </div>
 
                 </div>
 
-                <input type="password" name="contrasena" id="contrasena" placeholder="************" required>
+
+                <div class="generos">
+
+                    <h5>Géneros</h5>
+
+                    <div class="etiquetas">
+
+                        <span><a href="#">Ficcion Histórica</a></span>
+                        <span><a href="#">Realismo Mágico</a></span>
+                        <span><a href="#">Ensayo</a></span>
+                        <span><a href="#">Poesía Contemporánea</a></span>
+
+                    </div>
+
+                </div>
 
 
-                <button type="submit"> INGRESAR  </button>
-                <p class="in_sesion">¿No tienes una cuenta?<a href="registro.html">Registrate aquí</a></p>
+                <div class="autores">
+
+                    <h5>Autores</h5>
+
+                    <ul>
+
+                        <li><a href="#">Isabel Allende</a></li>
+                        <li><a href="#">Gabriel Garcia Márquez</a></li>
+                        <li><a href="#">Joan Didion</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <main class="contenido">
+
+            <div class="menu">
+
+                <a href="">Favoritos</a>
+
+                <a href="">Reseñas</a>
+
+                <a href="">Cuenta</a>
+
+            </div>
+
+
+            <div class="titulo">
+
+                <h1>Guardados</h1>
+
+                <span>4 libros</span>
+
+            </div>
+
+
+            <div class="grilla-libros">
+
+
+                
+                <div class="carta-libro">
+
+                    <div class="imagen-libro">
+
+                        <img src="./img/1.jpg">
+
+                        <div class="favorito">
+                            <a href="#">♥</a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-libro">
+
+                        <h3>El Aleph</h3>
+
+                        <p>Jorge Luis Borges</p>
+
+                        <button>
+                            leer más
+                        </button>
+
+                    </div>
+
+                </div>
 
 
 
+               
+                <div class="carta-libro">
 
-            </form>
+                    <div class="imagen-libro">
 
+                       <img src="./img/2.jpg">
 
+                        <div class="favorito">
+                            <a href="#">♥</a>
+                        </div>
 
-        </section>
-
-
-
-
-    </main>
-
-
-
+                    </div>
 
 
-    <!-- Footer -->
-    <footer class="footer-wrapper">
+                    <div class="info-libro">
+
+                        <h3>Cien años de soledad</h3>
+
+                        <p>Gabriel García Márquez</p>
+
+                        <button>
+                            leer más
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="carta-libro">
+
+                    <div class="imagen-libro">
+
+                        <img src="./img/3.jpg">
+
+                        <div class="favorito">
+                            <a href="#">♥</a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-libro">
+
+                        <h3>Ficciones</h3>
+
+                        <p>Jorge Luis Borges</p>
+
+                        <button>
+                            leer más
+                        </button>
+
+                    </div>
+
+                </div>
+                <div class="carta-libro">
+
+                    <div class="imagen-libro">
+
+                        <img src="./img/4.jpg">
+
+                        <div class="favorito">
+                            <a href="#">♥</a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-libro">
+
+                        <h3>Pedro Páramo</h3>
+
+                        <p>Juan Rulfo</p>
+
+                        <button>
+                            leer más
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+<footer class="footer-wrapper">
         <div class="footer-main">
 
             <div class="footer-col brand-col">
@@ -174,6 +332,7 @@
             </ul>
         </div>
     </footer>
+
 </body>
 
 </html>

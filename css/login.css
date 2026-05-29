@@ -38,7 +38,7 @@
 }
 
 .textop1{
-    bottom: 4em;
+    bottom: 3.3em;
     margin-bottom:1.5em ;
     font-family:'Playfair Display' ;
     color:#F9F8F6 ;
@@ -72,29 +72,38 @@
     justify-content: center;
     gap: 3em;
 }
-.form_registro{
+.form_login{
     display: flex;
     flex-direction: column;
     width: 70%;
     gap: 0.5em;
 } 
-.form_registro input{
+.container_contrasena{
+    display: flex;
+    justify-content: space-between;
+}
+.container_contrasena a{
+    font-family:'Inter' ;
+    color:#474542;
+    text-decoration:none ;
+    font-weight: 400;
+    line-height: 1em;
+    font-size: 0.9em;
+}
+.form_login input{
     height: 3em;
     border: 1px solid #00000090;
     padding: 0.9em;
 
 
 }
-.form_registro  button{
-
-    margin: 2em;
+.form_login button{
     height: 3em;
-    border-radius: 5%;
-    color: aliceblue ;
+    margin-top: 1em;
+    color: #ffffff ;
     background-color: #1C1917;
 }
-
-.form_registro button:hover{
+.form_login button:hover{
     background-color: #A3523B;
 }
 
@@ -104,7 +113,7 @@
     font-size: 3em;
 
 }
-.form_registro  label{
+.form_login  label{
     font-family:'Inter' ;
     color:#1C1917;
     font-size: 0.9em;
@@ -118,14 +127,7 @@
     font-weight: lighter;
 
 }
-.contrasena{
-    font-family:'Inter' ;
-    color:#57534E;
-    font-weight: 400;
-    line-height: 1em;
-    font-size: 0.7em;
 
-}
 .in_sesion{
     font-family:'Inter' ;
     color:#57534E;
@@ -164,6 +166,7 @@
 
     .textop1{
         font-size: 2.5em;
+
     }
 
     .textop2{
@@ -174,23 +177,23 @@
         padding: 4em 2em;
         gap: 2em;
     }
-
-    .form_registro{
+    
+    .form_login{
         width: 90%;
     }
 }
 
 
 @media screen and (max-width: 47em) {
-
+    
     .container{
         flex-direction: column;
     }
-
+    
     .seccion1 img{
         height: 50vh;
     }
-
+    
     .textop1{
         font-size: 2em;
         bottom: 5em;
@@ -221,25 +224,24 @@
         font-size: 0.9em;
     }
 
-    .form_registro{
+    .form_login{
         width: 100%;
     }
 
-    .form_registro input{
+    .form_login input{
         height: 3.2em;
     }
 
-    .form_registro button{
+    .form_login button{
         margin: 1.5em 0;
         width: 100%;
+    }
+    .container_contrasena{
+     flex-wrap: wrap;
+     gap: 0.5em;
     }
 
 
 
 
 }
-
-
-
-
-

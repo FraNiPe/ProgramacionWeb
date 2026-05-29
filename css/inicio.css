@@ -14,25 +14,7 @@ body{
     flex-direction: column;
 }
 
-/*BANNER PROMO*/
-.banner-promo{
-    height: 2.25em;
-    background-color: #1C1917;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-}
-
-.banner{
-    color: #FFF;
-    font-size: 0.875em;
-    font-weight: 300;
-    text-align: center;
-    line-height: 1.25em;
-    letter-spacing: 0.022em;
-}
 
 .content{
     display: flex;
@@ -45,7 +27,7 @@ body{
 .hero-section{
     width: 100%;
     min-height: 70vh;
-    background-image: url(img/fondo-hero.jpg);
+    background-image: url(/img/fondo-hero.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -136,20 +118,20 @@ h1{
     gap: 0.5em;
 }
 .card-large{
-    background-image: url(img/promo-card.jpg);
+    background-image: url(/img/promo-card.jpg);
     background-size: cover;
     background-position: center;
     grid-row:span 2;
 }
 
 .card-small{
-    background-image: linear-gradient(rgba(28, 25, 23, 0.6), rgba(28, 25, 23, 0.8)),url(img/promo-card2.jpg);
+    background-image: linear-gradient(rgba(28, 25, 23, 0.6), rgba(28, 25, 23, 0.8)),url(/img/promo-card2.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .card-two{
-    background-image: linear-gradient(rgba(28, 25, 23, 0.6), rgba(28, 25, 23, 0.8)), url(img/promo-card3.jpg);
+    background-image: linear-gradient(rgba(28, 25, 23, 0.6), rgba(28, 25, 23, 0.8)), url(/img/promo-card3.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -362,7 +344,7 @@ h1{
 }
 
 .community-section{
-    background-image: url(img/fondo-testimonial.png);
+    background-image: url(/img/fondo-testimonial.png);
     background-position: center;
     background-size: cover;
     width: 100%;
