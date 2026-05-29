@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background: #f3f1ef;
+    font-family: 'Inter', sans-serif;
+    color: #2c2c2c;
+}
+
+.contenedor {
+    max-width: 1300px;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 40px;
+}
+
+
+/* izquierda */
+
+.barra-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.tarjeta-perfil,
+.tarjeta-biblioteca {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 30px;
+}
+
+.tarjeta-perfil {
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: #161212;
+    color: white;
+
+    margin: auto;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.tarjeta-perfil h2 {
+    font-size: 40px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.tarjeta-perfil p {
+    margin-top: 5px;
+    color: gray;
+
+    margin-bottom: 25px;
+}
+
+.editar-btn {
+    width: 100%;
+
+    padding: 12px;
+
+    background: transparent;
+
+    border: 2px solid #2c2c2c;
+
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+
+.tarjeta-biblioteca h4 {
+    margin-bottom: 30px;
+}
+
+.fila-meta {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.barra {
+    width: 100%;
+    height: 8px;
+    border-radius: 18px;
+    background: #ddd;
+
+    margin-bottom: 30px;
+}
+
+.progreso {
+    width: 50%;
+    height: 100%;
+    border-radius: 18px;
+    background: #a35f49;
+}
+
+.generos h5,
+.autores h5 {
+    margin-bottom: 15px;
+}
+
+.etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.etiquetas span {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.autores ul {
+    padding-left: 20px;
+}
+
+.autores li {
+    margin-bottom: 10px;
+}
+
+
+/* contenido */
+
+.menu {
+    display: flex;
+    gap: 30px;
+
+    border-bottom: 1px solid #ddd;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: gray;
+}
+
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.titulo h1 {
+    font-size: 55px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.grilla-libros {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.carta-libro {
+    background: white;
+    border: 1px solid #ddd;
+}
+
+.imagen-libro {
+    position: relative;
+    height: 370px;
+}
+
+.imagen-libro img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.favorito {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #b45c42;
+}
+
+.info-libro {
+    padding: 20px;
+}
+
+.info-libro h3 {
+    font-size: 30px;
+    font-family: 'Cormorant Garamond', serif;
+
+    margin-bottom: 5px;
+}
+
+.info-libro p {
+    color: gray;
+
+    margin-bottom: 20px;
+}
+
+.info-libro button {
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+@media(max-width: 1024px) {
+
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .grilla-libros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width: 768px) {
+
+    .grilla-libros {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo h1 {
+        font-size: 40px;
+    }
+
+}
