@@ -46,8 +46,8 @@ body {
 }
 
 .foto-perfil {
-    width: 90px;
-    height: 90px;
+    width: 5.625rem;
+    height: 5.625rem;
 
     border-radius: 50%;
 
@@ -61,7 +61,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    font-size: 40px;
+    font-size: 2.5rem;
 
     font-family: 'Cormorant Garamond', serif;
 }
@@ -174,7 +174,7 @@ body {
 }
 
 .titulo h1 {
-    font-size: 55px;
+    font-size: 3.438rem;
     font-family: 'Cormorant Garamond', serif;
 }
 
@@ -194,7 +194,7 @@ body {
 
 .imagen-libro {
     position: relative;
-    height: 370px;
+    height: 23rem;
 }
 
 .imagen-libro img {
@@ -207,11 +207,11 @@ body {
 .favorito {
     position: absolute;
 
-    top: 15px;
-    right: 15px;
+    top: 1rem;
+    right: 1rem;
 
-    width: 45px;
-    height: 45px;
+    width: 2.813rem;
+    height: 2.813rem;
 
     border-radius: 50%;
 
@@ -249,7 +249,7 @@ body {
 }
 
 
-@media(max-width: 1024px) {
+@media(max-width: 60em) {
 
     .contenedor {
         grid-template-columns: 1fr;
@@ -261,14 +261,14 @@ body {
 
 }
 
-@media(max-width: 768px) {
+@media(max-width: 47em) {
 
     .grilla-libros {
         grid-template-columns: 1fr;
     }
 
     .titulo h1 {
-        font-size: 40px;
+        font-size: 2.5rem;
     }
 
 }
