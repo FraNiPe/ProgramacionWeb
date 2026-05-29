@@ -149,7 +149,7 @@ body {
 
 /* contenido */
 
-.menu {
+.menu2 {
     display: flex;
     gap: 30px;
 
@@ -160,7 +160,7 @@ body {
     margin-bottom: 30px;
 }
 
-.menu a {
+.menu2 a {
     text-decoration: none;
     color: gray;
 }
