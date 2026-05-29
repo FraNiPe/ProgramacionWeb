@@ -88,14 +88,14 @@ input{
     font-size: 3em;
     font-weight: 600;
 
-    margin-bottom: 0.9375em;
+    margin-bottom: 0.5em;
 }
 
 .descripcion {
     color: #777;
-    font-size: 1.3rem;
+    font-size: 1em;
     line-height: 1.7;
-    margin-bottom: 2.1875em;
+    margin-bottom: 2em;
 }
 
 
