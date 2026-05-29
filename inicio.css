@@ -483,7 +483,33 @@ h1{
 
 /*Media queries*/
 
-@media (max-width: 48em) {
+@media screen and (max-width: 47em) {
+    body {
+        font-size: 70%; 
+    }
+
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em 1.5em;
+    }
+
+    .community-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.5em;
+    }
+
+    .community-info, .testimonials-container {
+        max-width: 100%;
+    }
+    
+    
+
+}
+
+
+@media screen and (min-width: 47em) and (max-width:60em) {
     body {
         font-size: 80%; 
     }
@@ -502,31 +528,6 @@ h1{
         grid-template-columns: repeat(2, 1fr);
         gap: 2em 1.5em;
     }
-
-    .community-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 2.5em;
-    }
-
-    .community-info, .testimonials-container {
-        max-width: 100%;
-    }
-    
     
 }
 
-@media (max-width: 30em) {
-    body {
-        font-size: 80%; 
-    }
-
-    
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2em 1.5em;
-    }
-
-    
-
-}
