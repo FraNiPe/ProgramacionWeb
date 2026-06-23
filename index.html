@@ -11,66 +11,11 @@
 </head>
 <body>
 
-    <!--header y navbar-->
-    <header class="header-wrapper">
+    <!--header-->
+    <header id="main-header" class="header-wrapper"></header>
 
-        <div class="banner-promo">
-            <p class="banner">¡Nuevo! Organizá tus estanterias por géneros y épocas</p>
-        </div>
-
-        <div class="header-main">
-            <div class="header-left">
-                <a href="index.html" class="logo-link">
-                    <img src="img/Relatos & Hojas logo.png" alt="Logo de Relatos  & Hojas" class="logo-img">
-                </a>
-            </div>
-
-            <nav class="header-nav">
-            <ul class="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="#">Novedades</a></li>
-                <li><a href="#">Descubrir</a></li>
-                <li><a href="#">Comunidad</a></li>
-            </ul>
-            </nav>
-
-            <div class="header-icons">
-                <form class="search-form" action="resultados.html" method="GET">
-                <input type="search" id="buscador" name="q" class="search-input" placeholder="Buscar..." required aria-label="Buscar">
-                
-                <label for="buscador" class="icon-btn search-btn" aria-label="Abrir buscador">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-search">
-                        <title id="title-search">Buscar</title>
-                        <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M17.5 17.5L13.9167 13.9167" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </label>
-                </form>
-
-                <a href="pages/login.html" class="icon-btn user-btn" aria-label="Mi cuenta">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-login">
-                    <title id="title-login">Iniciar sesión</title>
-                    <path d="M15.8334 17.5V15.8333C15.8334 14.9493 15.4822 14.1014 14.857 13.4763C14.2319 12.8512 13.3841 12.5 12.5 12.5H7.50002C6.61597 12.5 5.76812 12.8512 5.143 13.4763C4.51788 14.1014 4.16669 14.9493 4.16669 15.8333V17.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M10 9.16667C11.841 9.16667 13.3334 7.67428 13.3334 5.83333C13.3334 3.99238 11.841 2.5 10 2.5C8.15907 2.5 6.66669 3.99238 6.66669 5.83333C6.66669 7.67428 8.15907 9.16667 10 9.16667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-
-                <button class="icon-btn favorite-btn" aria-label="Favoritos">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-favorite">
-                    <title id="title-favorite">Favoritos</title>
-                    <path d="M15.8333 11.6667C17.075 10.45 18.3333 8.99167 18.3333 7.08333C18.3333 5.86776 17.8504 4.70197 16.9909 3.84243C16.1313 2.98289 14.9655 2.5 13.75 2.5C12.2833 2.5 11.25 2.91667 9.99996 4.16667C8.74996 2.91667 7.71663 2.5 6.24996 2.5C5.03438 2.5 3.86859 2.98289 3.00905 3.84243C2.14951 4.70197 1.66663 5.86776 1.66663 7.08333C1.66663 9 2.91663 10.4583 4.16663 11.6667L9.99996 17.5L15.8333 11.6667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </div>
-    </div>
-    </header>
-
-<!--termina header y navbar-->
-
-
-
+    <!--main-->
     <main class="content">
-
 
         <section class="hero-section">
             <div class="hero-content">
@@ -487,60 +432,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer-wrapper">
-        <div class="footer-main">
-
-            <div class="footer-col brand-col">
-                <a href="index.html" class="logo-link">
-                    <img src="img/Relatos & Hojas logo.png" alt="Logo de Relatos  & Hojas" class="logo-img">
-                </a>
-                <p class="footer-desc">Librería independiente y rastreador de lecturas.</p>
-            </div>
-
-        <div class="footer-col links-col">
-            <h3 class="footer-heading">NUESTRAS REDES</h3>
-            <ul class="footer-menu">
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Linkedin</a></li>
-                <li><a href="#">Facebook</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col links-col">
-            <h3 class="footer-heading">NOSOTROS</h3>
-            <ul class="footer-menu">
-                <li><a href="#">Contáctanos</a></li>
-                <li><a href="#">Ayuda</a></li>
-                <li><a href="#">Preguntas frecuentes</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col newsletter-col">
-            <h3 class="footer-heading">BOLETÍN</h3>
-            <p class="footer-desc">Suscríbete para recibir recomendaciones semanales y acceso a nuevos lanzamientos.</p>
-            <form class="newsletter-form">
-                <div class="input-group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M13.3333 2.6665H2.66665C1.93027 2.6665 1.33331 3.26346 1.33331 3.99984V11.9998C1.33331 12.7362 1.93027 13.3332 2.66665 13.3332H13.3333C14.0697 13.3332 14.6666 12.7362 14.6666 11.9998V3.99984C14.6666 3.26346 14.0697 2.6665 13.3333 2.6665Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14.6666 4.6665L8.68665 8.4665C8.48083 8.59545 8.24286 8.66384 7.99998 8.66384C7.7571 8.66384 7.51913 8.59545 7.31331 8.4665L1.33331 4.6665" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <input type="email" class="newsletter-email" placeholder="Tu correo electrónico" required aria-labelledby="Tu correo electrónico">
-                </div>
-                <button type="submit" class="btn-submit">SUBSCRIBIRSE</button>
-            </form>
-        </div>
-
-    </div>
-
-        <div class="footer-bottom">
-            <p class="copyright">&copy; 2026 RELATOS & HOJAS. TODOS LOS DERECHOS RESERVADOS</p>
-            <ul class="legal-menu">
-                <li><a href="#">Privacidad</a></li>
-                <li><a href="#">Términos</a></li>
-            </ul>
-        </div>
-    </footer>
-
+    <footer id= "main-footer" class="footer-wrapper"></footer>
+    <script type="module" src="js/header-footer.js"></script>
 </body>
 </html>
 
