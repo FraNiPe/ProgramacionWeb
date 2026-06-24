@@ -166,6 +166,41 @@ h1{
     font-weight: 300;
 }
 
+.filtro-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0 auto;
+    color: #333;
+    width: 100%;
+    max-width: 75em;
+    padding: 1.5em 1.5em 0em 1.5em;
+}
+
+.select-filtro {
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1em;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+    padding: 0.25em 0;
+    transition: color 0.2s ease;
+}
+
+.select-filtro:hover, 
+.select-filtro:focus {
+    color: #666;
+}
+
+.select-filtro option {
+    background-color: #fff;
+    color: #333;
+    font-size: 0.95em;
+}
+
 .catalog-section{
     display: flex;
     flex-direction: column;

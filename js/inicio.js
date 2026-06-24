@@ -123,6 +123,34 @@ document.addEventListener("keyup", (e) => {
     }
 });
 
+document.addEventListener("change", (e) => {
+
+    if (e.target.matches("#orden-libros")){
+        const ordenElegido = e.target.value;
+
+        if(ordenElegido === "inicio"){
+            renderizarBusqueda("vaciar");
+            return;
+        }
+    
+    let librosOrdenados = [...LIBROS];
+
+    if (ordenElegido=== "titulo-az"){
+        librosOrdenados.sort((a,b) => a.titulo.localeCompare(b.titulo));
+
+    } else if (ordenElegido === "titulo-za"){
+        librosOrdenados.sort((a,b) => b.titulo.localeCompare(a.titulo)); 
+    } else if (ordenElegido === "autor-az"){
+        librosOrdenados.sort((a,b) => a.autor.localeCompare (b.autor));
+    } else if (ordenElegido === "autor-za"){
+        librosOrdenados.sort((a,b) => b.autor.localeCompare(a.autor));
+    }
+
+    renderizarBusqueda(librosOrdenados);
+    }
+
+})
+
 
 document.addEventListener("DOMContentLoaded", () => {
     if (grillas.length > 0) {
