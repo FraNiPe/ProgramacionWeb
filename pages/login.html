@@ -34,18 +34,18 @@
             <p class="subtitulo"> Ingresa tus credenciales para acceder a tu biblioteca.</p>
 
 
-            <form class="form_login" action="../pages/perfil.html" method="GET">
+            <form class="form_login" id="form_login" action="../pages/perfil.html" method="GET">
 
                 <label for="nombre"> NOMBRE DE USUARIO O CORREO ELECTRÓNICO</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Ej: usuario o lectornocturno@gmail.com " required autofocus>
+                <input type="text" name="nombre" id="nombre" placeholder="Ej: usuario o lectornocturno@gmail.com " >
+                <p id="error_user"></p>
 
 
                 <div class="container_contrasena">
                     <label for="contrasena"> CONTRASEÑA </label> <a href="../pages/recuperar.html">¿Olvidaste tu contraseña?</a>
-
                 </div>
-
-                <input type="password" name="contrasena" id="contrasena" placeholder="************" required>
+                <input type="password" name="contrasena" id="contrasena" placeholder="************" >
+                <p id="error_contra"></p>
 
 
                 <button type="submit"> INGRESAR  </button>
@@ -67,6 +67,7 @@
 
     <footer id= "main-footer" class="footer-wrapper"></footer>
     <script type="module" src="../js/header-footer.js"></script>
+    <script src="../js/login.js"></script>
 
 </body>
 

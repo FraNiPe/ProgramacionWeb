@@ -21,8 +21,7 @@
     <header id="main-header" class="header-wrapper"></header>
 
     <!--main-->
-    <div class="contenedor">
-
+    <main class="contenedor">
 
         <div class="lado-izquierdo">
 
@@ -61,41 +60,34 @@
             </p>
 
 
-            <form class="formulario">
+            <form class="formulario" id="form_recuperar">
 
-                <label for="usuario">
-                    USUARIO
-                </label>
+                <label for="usuario">USUARIO</label>
+                <input type="text" id="usuario" placeholder="Ingrese su usuario" >
+                <p id="error_usuario"></p>
 
-                <input type="text" id="usuario" placeholder="Ingrese su usuario" required>
+                <label for="password">NUEVA CONTRASEÑA</label>
+                <input type="password" id="password" placeholder="Ingrese la contraseña" >
+                <p id="error_password"></p>
 
-                <label for="clave">
-                    NUEVA CONTRASEÑA
-                </label>
-
-                <input type="password" id="clave" placeholder="Ingrese la contraseña" required>
-
-                <label for="repetir">
-                    REPETIR CONTRASEÑA
-                </label>
-
-                <input type="password" id="repetir" placeholder="Repita la contraseña" required>
+                <label for="repetir">REPETIR CONTRASEÑA</label>
+                <input type="password" id="repetir" placeholder="Repita la contraseña" >
+                <p id="error_repetir"></p>
 
                 <button type="submit">
-                    RESTABLECER CONTRASEÑA →
+                    RESTABLECER CONTRASEÑA 
                 </button>
 
             </form>
 
         </div>
 
-    </div>
+    </main>
 
 
-    </div>
-    
     <footer id= "main-footer" class="footer-wrapper"></footer>
     <script type="module" src="../js/header-footer.js"></script>
+    <script type="module" src="../js/recuperar.js"></script>
 
 </body>
 
