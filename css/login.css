@@ -1,3 +1,9 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
 .container{
     display: flex;
     align-items: center;
@@ -72,6 +78,9 @@
     width: 70%;
     gap: 0.5em;
 } 
+.form_login input.error{
+    border: 2px solid red;
+}
 .container_contrasena{
     display: flex;
     justify-content: space-between;
@@ -89,7 +98,15 @@
     border: 0.0625em solid #d8d8d8;
     padding: 0.9em;
 }
+#error_user,
+#error_contra{
+    font-family:'Inter' ;
+    color:#d22d2d;
+    font-weight: 400;
+    line-height: 1em;
+    font-size: 0.8em;
 
+}
 .form_login input:focus {
     outline: none;
     border-color: #b8694d;
