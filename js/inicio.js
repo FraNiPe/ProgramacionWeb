@@ -71,5 +71,11 @@ export function renderizarInicio (){
 document.addEventListener("DOMContentLoaded", () => {
     if (grillas.length >0){
         renderizarInicio();
+    const buscador = document.querySelector("#buscador");
+buscador.addEventListener("keyup",()=>{
+const consulta=buscador.value;
+const filtrado = LIBROS.filter(libro =>libro.titulo.indexOf(consulta)>-1);
+renderizarInicio(filtrado)
+});
     }
 })
