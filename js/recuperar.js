@@ -29,6 +29,17 @@ usuario.addEventListener("focus", ()=>{
     errorUsuario.textContent="";
 
 })
+
+password.addEventListener("focus", () => {
+    password.classList.remove("error");
+    errorPassword.textContent = "";
+});
+
+repetir.addEventListener("focus", () => {
+    repetir.classList.remove("error");
+    errorRepetir.textContent = "";
+});
+
 function validarPassword(pass) {
     const regex =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$!%=&*])[A-Za-z\d#$!%=&*]{8,12}$/;
@@ -49,8 +60,10 @@ function passIguales(){
 }
 repetir.addEventListener("blur", () => {
     if(!passIguales()){
+        repetir.classList.add("error");
         errorRepetir.textContent = "Contraseñas distintas";
     }else{
+        repetir.classList.remove("error");
         errorRepetir.textContent = "";
     }
 });
@@ -72,9 +85,6 @@ form.addEventListener("submit", (e)=>{
         window.location.href = "../pages/login.html";
     }else{
         alert("Datos incorrectos");
-
-
-
     }
 
 

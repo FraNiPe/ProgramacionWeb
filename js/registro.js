@@ -86,7 +86,7 @@ form.addEventListener("submit", function(event){
     
     if(validarNombre(nombre.value.trim()) && validarEmail(email.value.trim()) &&  validarPassword(password.value.trim()) ){
 
-     let usuarios = JSON.parse(localStorage.getItem("usuarios"))|| [];
+    let usuarios = JSON.parse(localStorage.getItem("usuarios"))|| [];
 
     const existeEmail = usuarios.some(usuario => usuario.email.toLowerCase() === email.value.trim().toLowerCase()
     );
@@ -112,10 +112,6 @@ form.addEventListener("submit", function(event){
         window.location.href = "../pages/login.html";
 
     }
-
-    
-
-
 
 
 });
