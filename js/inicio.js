@@ -1,6 +1,8 @@
 import {LIBROS} from "./libros.js";
 
 export const grillas = document.querySelectorAll(".products-grid");
+const subtitulos = document.querySelectorAll(".section-header");
+const seccionesSuperiores = document.querySelectorAll(".hero-section, .promo-section");
 
 // -- funcion tarjetas --//
 
@@ -68,14 +70,63 @@ export function renderizarInicio (){
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    if (grillas.length >0){
+// -- funcion barra de búsqueda --//
+
+function renderizarBusqueda (resultados){
+    grillas.forEach(grilla => {
+        while (grilla.firstChild){
+            grilla.removeChild(grilla.firstChild);
+        }
+    });
+
+    if (resultados === "vaciar"){
+        subtitulos.forEach(sub => sub.style.display = "");
+        seccionesSuperiores.forEach(sec => sec.style.display = "");
         renderizarInicio();
-    const buscador = document.querySelector("#buscador");
-buscador.addEventListener("keyup",()=>{
-const consulta=buscador.value;
-const filtrado = LIBROS.filter(libro =>libro.titulo.indexOf(consulta)>-1);
-renderizarInicio(filtrado)
-});
+        return;
     }
-})
+
+    subtitulos.forEach(sub => sub.style.display = "none");
+    seccionesSuperiores.forEach(sec => sec.style.display = "none");
+    
+
+    if (resultados.length === 0){
+        const mensajeError = document.createElement("p");
+        mensajeError.innerText = "Libro no encontrado";
+        mensajeError.classList.add("mensaje-vacio");
+        grillas [0].appendChild(mensajeError);
+        return;
+    }
+
+    resultados.forEach(libro => {
+        grillas[0].appendChild(crearNodoProducto(libro));
+    });
+
+}
+
+document.addEventListener("keyup", (e) => {
+    
+    if (e.target.matches("#buscador")){
+        const textoBuscado = e.target.value.toLowerCase();
+
+        if (textoBuscado === ""){
+        renderizarBusqueda("vaciar");
+        return;
+    }
+
+    const librosFiltrados = LIBROS.filter(item => {
+        return item.titulo.toLowerCase().includes(textoBuscado) ||
+                item.autor.toLowerCase().includes(textoBuscado);
+    });
+
+    renderizarBusqueda(librosFiltrados);
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (grillas.length > 0) {
+        renderizarInicio();
+    }
+});
+    
