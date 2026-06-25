@@ -1,12 +1,68 @@
-import {LIBROS} from "./libros.js";
+import { LIBROS } from "./libros.js";
 
 export const grillas = document.querySelectorAll(".products-grid");
 const subtitulos = document.querySelectorAll(".section-header");
 const seccionesSuperiores = document.querySelectorAll(".hero-section, .promo-section");
 
-// -- funcion tarjetas --//
+//Favoritos 
+function obtenerClaveFavoritos() {
+    const usuarioLogueado = JSON.parse(sessionStorage.getItem("usuarioLogueado"));
+    return usuarioLogueado ? "favoritos_" + usuarioLogueado.nombre : null;
+}
 
-export function crearNodoProducto (libro){
+function obtenerFavoritos() {
+    const clave = obtenerClaveFavoritos();
+    if (!clave) return [];
+    const guardados = localStorage.getItem(clave);
+    return guardados ? JSON.parse(guardados) : [];
+}
+
+function guardarFavoritos(ids) {
+    const clave = obtenerClaveFavoritos();
+    if (!clave) return;
+    localStorage.setItem(clave, JSON.stringify(ids));
+}
+
+function pintarCorazon(btnCorazon, esFavorito) {
+    const path = btnCorazon.querySelector("path");
+    if (esFavorito) {
+        btnCorazon.classList.add("activo");
+        btnCorazon.setAttribute("aria-label", "Quitar de favoritos");
+        if (path) path.setAttribute("fill", "currentColor");
+    } else {
+        // Corazón vacío: solo contorno
+        btnCorazon.classList.remove("activo");
+        btnCorazon.setAttribute("aria-label", "Añadir a favoritos");
+        if (path) path.setAttribute("fill", "none");
+    }
+}
+
+function toggleFavorito(idLibro, btnCorazon) {
+    // Si no hay sesión, redirigimos al login
+    if (!obtenerClaveFavoritos()) {
+        window.location.href = "pages/login.html";
+        return;
+    }
+
+    let ids          = obtenerFavoritos();
+    const esFavorito = ids.includes(idLibro);
+
+    if (esFavorito) {
+        ids = ids.filter(id => id !== idLibro);
+    } else {
+        ids.push(idLibro);
+    }
+
+    guardarFavoritos(ids);
+
+    pintarCorazon(btnCorazon, !esFavorito);
+}
+
+// Función tarjetas 
+export function crearNodoProducto(libro) {
+    const ids        = obtenerFavoritos();
+    const esFavorito = ids.includes(libro.id);
+
     const article = document.createElement("article");
     article.classList.add("product-card");
 
@@ -14,7 +70,7 @@ export function crearNodoProducto (libro){
     imgBox.classList.add("product-img-box");
 
     imgBox.innerHTML = `
-        <button class="card-fav-btn" aria-label="Añadir a favoritos">
+        <button class="card-fav-btn ${esFavorito ? "activo" : ""}" aria-label="${esFavorito ? "Quitar de favoritos" : "Añadir a favoritos"}" data-id="${libro.id}">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M15.8333 11.6667C17.075 10.45 18.3333 8.99167 18.3333 7.08333C18.3333 5.86776 17.8504 4.70197 16.9909 3.84243C16.1313 2.98289 14.9655 2.5 13.75 2.5C12.2833 2.5 11.25 2.91667 9.99996 4.16667C8.74996 2.91667 7.71663 2.5 6.24996 2.5C5.03438 2.5 3.86859 2.98289 3.00905 3.84243C2.14951 4.70197 1.66663 5.86776 1.66663 7.08333C1.66663 9 2.91663 10.4583 4.16663 11.6667L9.99996 17.5L15.8333 11.6667Z" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -28,6 +84,13 @@ export function crearNodoProducto (libro){
             </div>
         </div>
     `;
+
+    const btnCorazon = imgBox.querySelector(".card-fav-btn");
+    pintarCorazon(btnCorazon, esFavorito);
+
+    btnCorazon.addEventListener("click", () => {
+        toggleFavorito(libro.id, btnCorazon);
+    });
 
     const infoBox = document.createElement("div");
     infoBox.classList.add("product-info");
@@ -58,28 +121,27 @@ export function crearNodoProducto (libro){
     return article;
 }
 
-export function renderizarInicio (){
-    if (grillas.length >= 3){
+export function renderizarInicio() {
+    if (grillas.length >= 3) {
         const lote1 = LIBROS.slice(0, 4);
         const lote2 = LIBROS.slice(4, 8);
-        const lote3 = LIBROS.slice(8,12);
+        const lote3 = LIBROS.slice(8, 12);
 
-    lote1.forEach(libro => grillas[0].appendChild(crearNodoProducto(libro)));
-    lote2.forEach(libro => grillas[1].appendChild(crearNodoProducto(libro)));
-    lote3.forEach(libro => grillas [2].appendChild(crearNodoProducto(libro)));
+        lote1.forEach(libro => grillas[0].appendChild(crearNodoProducto(libro)));
+        lote2.forEach(libro => grillas[1].appendChild(crearNodoProducto(libro)));
+        lote3.forEach(libro => grillas[2].appendChild(crearNodoProducto(libro)));
     }
 }
 
-// -- funcion barra de búsqueda --//
-
-function renderizarBusqueda (resultados){
+// Función  búsqueda
+function renderizarBusqueda(resultados) {
     grillas.forEach(grilla => {
-        while (grilla.firstChild){
+        while (grilla.firstChild) {
             grilla.removeChild(grilla.firstChild);
         }
     });
 
-    if (resultados === "vaciar"){
+    if (resultados === "vaciar") {
         subtitulos.forEach(sub => sub.style.display = "");
         seccionesSuperiores.forEach(sec => sec.style.display = "");
         renderizarInicio();
@@ -88,73 +150,65 @@ function renderizarBusqueda (resultados){
 
     subtitulos.forEach(sub => sub.style.display = "none");
     seccionesSuperiores.forEach(sec => sec.style.display = "none");
-    
 
-    if (resultados.length === 0){
+    if (resultados.length === 0) {
         const mensajeError = document.createElement("p");
         mensajeError.innerText = "Libro no encontrado";
         mensajeError.classList.add("mensaje-vacio");
-        grillas [0].appendChild(mensajeError);
+        grillas[0].appendChild(mensajeError);
         return;
     }
 
     resultados.forEach(libro => {
         grillas[0].appendChild(crearNodoProducto(libro));
     });
-
 }
 
 document.addEventListener("keyup", (e) => {
-    
-    if (e.target.matches("#buscador")){
+    if (e.target.matches("#buscador")) {
         const textoBuscado = e.target.value.toLowerCase();
 
-        if (textoBuscado === ""){
-        renderizarBusqueda("vaciar");
-        return;
-    }
+        if (textoBuscado === "") {
+            renderizarBusqueda("vaciar");
+            return;
+        }
 
-    const librosFiltrados = LIBROS.filter(item => {
-        return item.titulo.toLowerCase().includes(textoBuscado) ||
-                item.autor.toLowerCase().includes(textoBuscado);
-    });
+        const librosFiltrados = LIBROS.filter(item => {
+            return item.titulo.toLowerCase().includes(textoBuscado) ||
+                   item.autor.toLowerCase().includes(textoBuscado);
+        });
 
-    renderizarBusqueda(librosFiltrados);
+        renderizarBusqueda(librosFiltrados);
     }
 });
 
 document.addEventListener("change", (e) => {
-
-    if (e.target.matches("#orden-libros")){
+    if (e.target.matches("#orden-libros")) {
         const ordenElegido = e.target.value;
 
-        if(ordenElegido === "inicio"){
+        if (ordenElegido === "inicio") {
             renderizarBusqueda("vaciar");
             return;
         }
-    
-    let librosOrdenados = [...LIBROS];
 
-    if (ordenElegido=== "titulo-az"){
-        librosOrdenados.sort((a,b) => a.titulo.localeCompare(b.titulo));
+        let librosOrdenados = [...LIBROS];
 
-    } else if (ordenElegido === "titulo-za"){
-        librosOrdenados.sort((a,b) => b.titulo.localeCompare(a.titulo)); 
-    } else if (ordenElegido === "autor-az"){
-        librosOrdenados.sort((a,b) => a.autor.localeCompare (b.autor));
-    } else if (ordenElegido === "autor-za"){
-        librosOrdenados.sort((a,b) => b.autor.localeCompare(a.autor));
+        if (ordenElegido === "titulo-az") {
+            librosOrdenados.sort((a, b) => a.titulo.localeCompare(b.titulo));
+        } else if (ordenElegido === "titulo-za") {
+            librosOrdenados.sort((a, b) => b.titulo.localeCompare(a.titulo));
+        } else if (ordenElegido === "autor-az") {
+            librosOrdenados.sort((a, b) => a.autor.localeCompare(b.autor));
+        } else if (ordenElegido === "autor-za") {
+            librosOrdenados.sort((a, b) => b.autor.localeCompare(a.autor));
+        }
+
+        renderizarBusqueda(librosOrdenados);
     }
-
-    renderizarBusqueda(librosOrdenados);
-    }
-
-})
-
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     if (grillas.length > 0) {
         renderizarInicio();
     }
 });
-    
