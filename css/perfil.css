@@ -85,6 +85,24 @@ body {
     font-size: 1.1rem;
 }
 
+.btn-logout {
+    padding: 12px;
+    margin-top: 0.5em;
+    width: 100%;
+    background-color: #2c2c2c;
+    color: #fff; 
+    border: none;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-logout:hover {
+    background-color: #d9534f;
+    color: white;
+}
 
 .tarjeta-biblioteca h4 {
     margin-bottom: 30px;
