@@ -67,7 +67,8 @@ password.addEventListener("focus", () => {
     errorPassword.textContent = "";
 });
 
-btnReset.addEventListener("click", ()=>{
+form.addEventListener("reset", () => {
+    
     errorNombre.textContent = "";
     errorEmail.textContent = "";
     errorPassword.textContent = "";
@@ -75,10 +76,11 @@ btnReset.addEventListener("click", ()=>{
     nombre.classList.remove("error");
     email.classList.remove("error");
     password.classList.remove("error");
-
-
-
 });
+
+
+
+
 form.addEventListener("submit", function(event){
     event.preventDefault();
 

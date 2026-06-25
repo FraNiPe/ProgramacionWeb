@@ -7,8 +7,8 @@ const errorContra= document.getElementById("error_contra");
 let usuariosRegistrados=JSON.parse(localStorage.getItem("usuarios"))|| [];
 
 function validarAcceso(){
-  const existeUser=usuariosRegistrados.some( usuario=> (usuario.nombre===user.value.trim()||usuario.email.toLowerCase() === user.value.trim().toLowerCase())&& usuario.password===password.value.trim())
-  return existeUser;
+    const existeUser=usuariosRegistrados.some( usuario=> (usuario.nombre===user.value.trim()||usuario.email.toLowerCase() === user.value.trim().toLowerCase())&& usuario.password===password.value.trim())
+    return existeUser;
 }
 function validarUser(){
     const userValido=usuariosRegistrados.some(usuario=>usuario.nombre===user.value.trim()||usuario.email.toLowerCase() === user.value.trim().toLowerCase());
