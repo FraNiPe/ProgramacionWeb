@@ -96,7 +96,7 @@ h1 a, h2 a {
     transition: all 0.4s ease;
 }
 
-.search-input:focus {
+.search-form.buscador-abierto .search-input {
     width: 11.25em; 
     opacity: 1;
     padding-right: 0.625em;
@@ -108,6 +108,9 @@ h1 a, h2 a {
     cursor: pointer;
     display: flex;
     color: #000;
+    background: none; 
+    border: none;     
+    padding: 0;
 }
 /*BANNER PROMO*/
 .banner-promo{

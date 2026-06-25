@@ -27,17 +27,17 @@ export function loadHeader () {
             </nav>
 
             <div class="header-icons">
-                <form class="search-form" action="resultados.html" method="GET">
-                    <input type="search" id="buscador" name="q" class="search-input" placeholder="Buscar..." required aria-label="Buscar">
-                    
-                    <label for="buscador" class="icon-btn search-btn" aria-label="Abrir buscador">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-search">
-                            <title id="title-search">Buscar</title>
-                            <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M17.5 17.5L13.9167 13.9167" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </label>
-                </form>
+                <form class="search-form" id="contenedor-buscador" action="resultados.html" method="GET">
+                <input type="search" id="buscador" name="q" class="search-input" placeholder="Buscar..." required aria-label="Buscar">
+                
+                <button type="button" id="btn-lupa" class="icon-btn search-btn" aria-label="Abrir buscador">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-search">
+                        <title id="title-search">Buscar</title>
+                        <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.5 17.5L13.9167 13.9167" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
 
                 <a href="pages/login.html" id= "link-perfil" class="icon-btn user-btn" aria-label="Mi cuenta">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-login">
@@ -46,13 +46,6 @@ export function loadHeader () {
                         <path d="M10 9.16667C11.841 9.16667 13.3334 7.67428 13.3334 5.83333C13.3334 3.99238 11.841 2.5 10 2.5C8.15907 2.5 6.66669 3.99238 6.66669 5.83333C6.66669 7.67428 8.15907 9.16667 10 9.16667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
-
-                <button class="icon-btn favorite-btn" aria-label="Favoritos">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-favorite">
-                        <title id="title-favorite">Favoritos</title>
-                        <path d="M15.8333 11.6667C17.075 10.45 18.3333 8.99167 18.3333 7.08333C18.3333 5.86776 17.8504 4.70197 16.9909 3.84243C16.1313 2.98289 14.9655 2.5 13.75 2.5C12.2833 2.5 11.25 2.91667 9.99996 4.16667C8.74996 2.91667 7.71663 2.5 6.24996 2.5C5.03438 2.5 3.86859 2.98289 3.00905 3.84243C2.14951 4.70197 1.66663 5.86776 1.66663 7.08333C1.66663 9 2.91663 10.4583 4.16663 11.6667L9.99996 17.5L15.8333 11.6667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
             </div>
         </div>
     `; 
@@ -115,6 +108,25 @@ export function loadFooter (){
             </ul>
         </div>`;
 }
+
+
+document.addEventListener("click", (e) => {
+    const btnLupa = e.target.closest("#btn-lupa");
+
+    if (btnLupa) {
+        const contenedorBuscador = document.getElementById("contenedor-buscador");
+        const inputBuscador = document.getElementById("buscador");
+
+        if (contenedorBuscador) {
+            contenedorBuscador.classList.toggle("buscador-abierto");
+            
+            if (contenedorBuscador.classList.contains("buscador-abierto")) {
+                inputBuscador.focus();
+            }
+        }
+    }
+});
+
 
 document.addEventListener("DOMContentLoaded", () => {
     loadHeader();
