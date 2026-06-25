@@ -39,7 +39,7 @@ export function loadHeader () {
                     </label>
                 </form>
 
-                <a href="pages/login.html" class="icon-btn user-btn" aria-label="Mi cuenta">
+                <a href="pages/login.html" id= "link-perfil" class="icon-btn user-btn" aria-label="Mi cuenta">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-labelledby="title-login">
                         <title id="title-login">Iniciar sesión</title>
                         <path d="M15.8334 17.5V15.8333C15.8334 14.9493 15.4822 14.1014 14.857 13.4763C14.2319 12.8512 13.3841 12.5 12.5 12.5H7.50002C6.61597 12.5 5.76812 12.8512 5.143 13.4763C4.51788 14.1014 4.16669 14.9493 4.16669 15.8333V17.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
