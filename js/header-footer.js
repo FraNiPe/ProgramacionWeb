@@ -1,5 +1,7 @@
-export function loadHeader () {
+const estamosEnPages = window.location.pathname.includes("/pages/");
+const prefijo = estamosEnPages ? "../" : "";
 
+export function loadHeader () {
     const headerContainer = document.getElementById("main-header");
 
     if (!headerContainer) return;
@@ -12,14 +14,14 @@ export function loadHeader () {
 
         <div class="header-main">
             <div class="header-left">
-                <a href="index.html" class="logo-link">
-                    <img src="../img/Relatos & Hojas logo.png" alt="Logo de Relatos & Hojas" class="logo-img">
+                <a href="${prefijo}index.html" class="logo-link">
+                    <img src="${prefijo}../img/Relatos & Hojas logo.png" alt="Logo de Relatos & Hojas" class="logo-img">
                 </a>
             </div>
 
             <nav class="header-nav">
                 <ul class="menu">
-                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="${prefijo}index.html">Inicio</a></li>
                     <li><a href="#">Novedades</a></li>
                     <li><a href="#">Descubrir</a></li>
                     <li><a href="#">Comunidad</a></li>
@@ -59,8 +61,8 @@ export function loadFooter (){
     footerContainer.innerHTML = `<div class="footer-main">
 
             <div class="footer-col brand-col">
-                <a href="index.html" class="logo-link">
-                    <img src="../img/Relatos & Hojas logo.png" alt="Logo de Relatos  & Hojas" class="logo-img">
+                <a href="${prefijo}index.html" class="logo-link">
+                    <img src="${prefijo}img/Relatos & Hojas logo.png" alt="Logo de Relatos  & Hojas" class="logo-img">
                 </a>
                 <p class="footer-desc">Librería independiente y rastreador de lecturas.</p>
             </div>
